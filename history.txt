@@ -1,0 +1,21 @@
+95
+
+baywatch -n 1 dirty
+
+baywatch -n 1 interrupt
+baywatch -n 1 newborn
+baywatch -n 1 newborn
+
+baywatch -n 1 dirty
+
+baywatch -n 1 interrupt
+baywatch -n 1 interrupt
+
+baywatch -n 1 dirty
+
+baywatch -n 1 newborn
+
+baywatch -n 1 dirty
+
+baywatch -n 1 newborn
+baywatch -n 1 newborn
