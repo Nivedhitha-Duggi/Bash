@@ -1,7 +1,6 @@
-# Magnush Linux Shell
+# B Linux Shell
 
-<br>
-Magnush is the clone of the Bash shell. It is written in C, and supports various features that we can see in a traditional Bash shell. 
+<br> B-Shell is the clone of the Bash shell. It is written in C, and supports various features that we can see in a traditional Bash shell. 
 
 &nbsp;
 
@@ -9,13 +8,13 @@ Magnush is the clone of the Bash shell. It is written in C, and supports various
 
 #### 1. Clone the repo and navigate to the folder
 ```sh
-git clone https://github.com/SwethaVipparla/Magnush.git
-cd Magnush/
+git clone https://github.com/Nivedhitha-Duggi/Bash.git
+cd B/
 ```
 #### 2. Compile the code and run the executable
 ```sh
 make
-./Magnush
+./B
 ```
 
 #### 3. Input Commands
@@ -26,24 +25,24 @@ Once the code is up and running, the commands for the included features can be e
 
 #### Command Prompt
 
-Magnush has a command prompt that is similar to the one in a Bash shell. The prompt is coloured and is displayed in the form of `<username@system_name:curr_dir>`.
+B-Shell has a command prompt that is similar to the one in a Bash shell. The prompt is coloured and is displayed in the form of `<username@system_name:curr_dir>`.
 The root directory is the one from which the shell is started.
 
- > Implemented in [prompt.c](https://github.com/SwethaVipparla/Magnush/blob/main/Features/prompt.c)
+ > Implemented in [prompt.c](https://github.com/Nivedhitha-Duggi/Bash/blob/main/Features/prompt.c)
 
 #### 1. Command Pipelines
 
-Magnush supports piping with commands. One or more commands can be piped using `|`, and any number of pipes are supported.
+B-Shell supports piping with commands. One or more commands can be piped using `|`, and any number of pipes are supported.
 
 ```sh
 cat <filename.txt> | head -7 | tail -5
 ```
 
- > Implemented in [pipe.c](https://github.com/SwethaVipparla/Magnush/blob/main/Features/pipe.c)
+ > Implemented in [pipe.c](https://github.com/Nivedhitha-Duggi/Bash/blob/main/Features/pipe.c)
 
 #### 2. Input/Output Redirection
 
-Magnush also provides for input/output redirection of commands. The output of commands can be redirected to another file or command instead of stdout, the input can be taken from a file other than stdin, or the output of a command can be appended to a file. These redirections are done using the `<`, `>`, and `>>` symbols.  
+B-Shell also provides for input/output redirection of commands. The output of commands can be redirected to another file or command instead of stdout, the input can be taken from a file other than stdin, or the output of a command can be appended to a file. These redirections are done using the `<`, `>`, and `>>` symbols.  
 Both input and output redirections can be used simultaneously too. 
 
 ```sh
@@ -51,7 +50,7 @@ echo "hey" > output.txt
 sort < output.txt > sorted.txt
 ```
 
- > Implemented in [redirection.c](https://github.com/SwethaVipparla/Magnush/blob/main/Features/redirection.c)
+ > Implemented in [redirection.c](https://github.com/Nivedhitha-Duggi/Bash/blob/main/Features/redirection.c)
 
  #### 3. Input/Output Redirection within Command Pipelines
 
@@ -72,7 +71,7 @@ Changes the current directory to another directory specified and displays an err
 cd <path_to_destination_directory>
 ```
 
- > Implemented in [cd.c](https://github.com/SwethaVipparla/Magnush/blob/main/Commands/cd.c)
+ > Implemented in [cd.c](https://github.com/Nivedhitha-Duggi/Bash/blob/main/Commands/cd.c)
 
 
 #### 2.  pwd
@@ -81,7 +80,7 @@ Ouputs the path of the current working directory.
 ```sh
 pwd
 ```
- > Implemented in [pwd.c](https://github.com/SwethaVipparla/Magnush/blob/main/Commands/pwd.c)
+ > Implemented in [pwd.c](https://github.com/Nivedhitha-Duggi/Bash/blob/main/Commands/pwd.c)
 
 
 #### 3.  echo
@@ -91,7 +90,7 @@ Prints the specified message on the terminal. It accounts for any random spaces 
 echo <message>
 ```
 
- > Implemented in [echo.c](https://github.com/SwethaVipparla/Magnush/blob/main/Commands/echo.c)
+ > Implemented in [echo.c](https://github.com/Nivedhitha-Duggi/Bash/blob/main/Commands/echo.c)
 
 #### 4.  ls
 Lists all the files and directories in the given directory. It handles multiple directories as arguments. Flags can be used to provide more functionalities to the command.  
@@ -113,7 +112,7 @@ ls -l <path_to_directory>
 
 These flags can be used together in different orders while giving the intended output.
 
- > Implemented in [ls.c](https://github.com/SwethaVipparla/Magnush/blob/main/Commands/ls.c)
+ > Implemented in [ls.c](https://github.com/Nivedhitha-Duggi/Bash/blob/main/Commands/ls.c)
 
 #### 5. history
 Diplays the history of the commands run. If no argument is specified, the last 10 commands are listed. The history persists even after the shell is exited.
@@ -122,7 +121,7 @@ Diplays the history of the commands run. If no argument is specified, the last 1
 history <no_of_commands>
 ```
 
- > Implemented in [history.c](https://github.com/SwethaVipparla/Magnush/blob/main/Commands/history.c)
+ > Implemented in [history.c](https://github.com/Nivedhitha-Duggi/Bash/blob/main/Commands/history.c)
 
 #### 6. pinfo
 Displays information about the process, including its PID, status, memory, and executable path.
@@ -132,7 +131,7 @@ pinfo <PID>
 ```
 Running just `pinfo` without any arguments will display information about the shell program.
 
- > Implemented in [pinfo.c](https://github.com/SwethaVipparla/Magnush/blob/main/Commands/pinfo.c)
+ > Implemented in [pinfo.c](https://github.com/Nivedhitha-Duggi/Bash/blob/main/Commands/pinfo.c)
 
 
 #### 7. repeat
@@ -142,7 +141,7 @@ Executes the given instruction multiple times. The first argument to the command
 repeat <no_of_times> <input_command>
 ```
 
- > Implemented in [repeat.c](https://github.com/SwethaVipparla/Magnush/blob/main/Commands/repeat.c)
+ > Implemented in [repeat.c](https://github.com/Nivedhitha-Duggi/Bash/blob/main/Commands/repeat.c)
 
 #### 8. fg
 Brings the running or stopped background job corresponding to the job number​ to the foreground and changes its state to ​running​.
@@ -151,7 +150,7 @@ Brings the running or stopped background job corresponding to the job number​ 
 fg <job_number>
 ```
 
- > Implemented in [fgbg.c](https://github.com/SwethaVipparla/Magnush/blob/main/Commands/fgbg.c)
+ > Implemented in [fgbg.c](https://github.com/Nivedhitha-Duggi/Bash/blob/main/Commands/fgbg.c)
 
 #### 9. bg
 Changes the state of a stopped background job to running (in the background). It has no effect on foreground processes and already running background processes.
@@ -160,7 +159,7 @@ Changes the state of a stopped background job to running (in the background). It
 bg <job_number>
 ```
 
- > Implemented in [fgbg.c](https://github.com/SwethaVipparla/Magnush/blob/main/Commands/fgbg.c)
+ > Implemented in [fgbg.c](https://github.com/Nivedhitha-Duggi/Bash/blob/main/Commands/fgbg.c)
 
 #### 10. jobs
 Prints a list of all currently running background processes spawned by the shell in alphabetical order of the command name, along with
@@ -183,7 +182,7 @@ jobs -s
 
 These flags can be used at the same time in different orders while giving the intended output.
 
- > Implemented in [jobs.c](https://github.com/SwethaVipparla/Magnush/blob/main/Commands/jobs.c)
+ > Implemented in [jobs.c](https://github.com/Nivedhitha-Duggi/Bash/blob/main/Commands/jobs.c)
 
 #### 11. sig
 
@@ -193,7 +192,7 @@ Takes the job number of a running job and sends the signal corresponding to ​s
 sig <job_number> <signal_number>
 ```
 
- > Implemented in [sig.c](https://github.com/SwethaVipparla/Magnush/blob/main/Commands/sig.c)
+ > Implemented in [sig.c](https://github.com/Nivedhitha-Duggi/Bash/blob/main/Commands/sig.c)
 
 #### 12.  replay
 Executes a particular command in fixed time interval for a certain period 
@@ -205,7 +204,7 @@ replay -command <input_command> -interval <time_interval> -period <time_period>
 All the flags here are required and can be implemented in any order. 
 Background processes are also supported. 
 
- > Implemented in [replay.c](https://github.com/SwethaVipparla/Magnush/blob/main/Commands/replay.c)
+ > Implemented in [replay.c](https://github.com/Nivedhitha-Duggi/Bash/blob/main/Commands/replay.c)
 
 #### 13.  baywatch
 ##### Flags supported  
@@ -230,7 +229,7 @@ baywatch -n <time_interval> newborn
 ```sh
 baywatch -n <time_interval> dirty
 ```
- > Implemented in [baywatch.c](https://github.com/SwethaVipparla/Magnush/blob/main/Commands/baywatch.c)
+ > Implemented in [baywatch.c](https://github.com/Nivedhitha-Duggi/Bash/blob/main/Commands/baywatch.c)
 
 &nbsp;
 ## Processes
@@ -246,7 +245,7 @@ For example, `vim` and `gedit` are foreground processes.
 <input_command>
 ```
 
- > Implemented in [process.c](https://github.com/SwethaVipparla/Magnush/blob/main/Commands/process.c)
+ > Implemented in [process.c](https://github.com/Nivedhitha-Duggi/Bash/blob/main/Commands/process.c)
 
 #### 2. Background Processes
 To run processes in the background, enter an `&` after the command and the process will start up.
@@ -261,14 +260,14 @@ or
 <input_command>&
 ```
 
- > Implemented in [process.c](https://github.com/SwethaVipparla/Magnush/blob/main/Commands/process.c)
+ > Implemented in [process.c](https://github.com/Nivedhitha-Duggi/Bash/blob/main/Commands/process.c)
 
  &nbsp;
 ## Signal Handling
 
-Magnush allows the handling of signal, each of which serves a different purpose.
+B-Shell allows the handling of signal, each of which serves a different purpose.
 
- > Implemented in [signals.c](https://github.com/SwethaVipparla/Magnush/blob/main/Features/signals.c)
+ > Implemented in [signals.c](https://github.com/Nivedhitha-Duggi/Bash/blob/main/Features/signals.c)
 
 #### 1. Ctrl-Z
 
